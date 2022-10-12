@@ -2783,9 +2783,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Familia\\Documents\\GitHub\\Proyecto-Final-C-\\ConsoleApp1\\ConsoleApp1\\ConsoleApp1.csproj",
-      "projectName": "ConsoleApp1",
-      "projectPath": "C:\\Users\\Familia\\Documents\\GitHub\\Proyecto-Final-C-\\ConsoleApp1\\ConsoleApp1\\ConsoleApp1.csproj",
+      "projectUniqueName": "C:\\Users\\Familia\\Documents\\GitHub\\Proyecto-Final-C-\\ConsoleApp1\\ConsoleApp1\\master.csproj",
+      "projectName": "master",
+      "projectPath": "C:\\Users\\Familia\\Documents\\GitHub\\Proyecto-Final-C-\\ConsoleApp1\\ConsoleApp1\\master.csproj",
       "packagesPath": "C:\\Users\\Familia\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Familia\\Documents\\GitHub\\Proyecto-Final-C-\\ConsoleApp1\\ConsoleApp1\\obj\\",
       "projectStyle": "PackageReference",
