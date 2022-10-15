@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp1
+namespace master.Models
 {
     public class Usuario
     {
@@ -18,12 +18,13 @@ namespace ConsoleApp1
         public Usuario()
         {
             Id = 0;
-            Nombre = String.Empty;
-            Apellido = String.Empty;
-            NombreUsuario = String.Empty;
-            Contraseña = String.Empty;
-            Mail = String.Empty;
+            Nombre = string.Empty;
+            Apellido = string.Empty;
+            NombreUsuario = string.Empty;
+            Contraseña = string.Empty;
+            Mail = string.Empty;
         }
 
     }
 }
+
