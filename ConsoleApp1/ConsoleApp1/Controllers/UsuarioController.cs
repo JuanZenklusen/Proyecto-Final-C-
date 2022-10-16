@@ -6,7 +6,7 @@ namespace master.UsuarioController
 {
     public static class UsuarioController
     {
-        public static void TraerUsuario()
+        public static List<Usuario> TraerUsuario(string NombreUsuario)
         {
             var listaUsuario = new List<Usuario>();
 
@@ -22,10 +22,10 @@ namespace master.UsuarioController
                 SqlCommand cmd = con.CreateCommand();
                 cmd.CommandText = "SELECT * FROM Usuario WHERE NombreUsuario = @nomUsu";
 
-                string NombreUsuario = String.Empty;
+                //string NombreUsuario = String.Empty;
 
-                Console.WriteLine("Ingrese Nombre de Usuario: ");
-                NombreUsuario = Console.ReadLine();
+                //Console.WriteLine("Ingrese Nombre de Usuario: ");
+                //NombreUsuario = Console.ReadLine();
 
                 var param = new SqlParameter();
                 param.ParameterName = "nomUsu";
@@ -49,7 +49,7 @@ namespace master.UsuarioController
                 }
 
                 Console.WriteLine("Los usuarios son: \n");
-
+                /*
                 foreach (var us in listaUsuario)
                 {
                     Console.WriteLine("Codigo de usuario: {0}", us.Id);
@@ -59,9 +59,15 @@ namespace master.UsuarioController
                     Console.WriteLine("Contraseña: {0}", us.Contraseña);
                     Console.WriteLine("Mail: {0}", us.Mail);
                     Console.WriteLine("--------------\n");
-                }
+
+                }*/
+
+               
+                
                 reader.Close();
+                
             }
+            return listaUsuario;
         }
 
 
