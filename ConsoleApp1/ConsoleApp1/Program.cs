@@ -6,8 +6,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        // Traer usuario
-        /*
+        // a) Traer usuario
         Console.WriteLine("Ingrese Nombre de Usuario: ");
         string NombreUsuario = Console.ReadLine();
         var lisUsuario = UsuarioController.TraerUsuario(NombreUsuario);
@@ -22,7 +21,7 @@ class Program
             Console.WriteLine("--------------\n");
         }
 
-        // Traer productos cargados por un usuario
+        // b) Traer productos cargados por un usuario
         Console.WriteLine("Ingrese codigo de usuario: ");
         int idUsuario = Convert.ToInt32(Console.ReadLine());
         var listaProducto = ProductoController.TraerProducto(idUsuario);
@@ -30,9 +29,20 @@ class Program
         {
             Console.WriteLine(prod.Descripciones);
         }
+        Console.WriteLine("--------------\n");
+        
+        // c) Traer productos vendidos
+        Console.WriteLine("Ingrese nombre de usuario: ");
+        string nomDeUsuario = Console.ReadLine().ToString();
+        var prodVentidosPorUsuario = ProdVendidoController.ProdutoVendido(nomDeUsuario);
+        foreach (var prdVenUsu in prodVentidosPorUsuario)
+        {
+            Console.WriteLine(prdVenUsu.Descripciones);
+        }
+        Console.WriteLine("--------------\n");
 
-
-        // Traer Ventas
+        
+        // d) Traer Ventas
         Console.WriteLine("\nIngrese codigo de usuario: ");
         int idUsuario2 = Convert.ToInt32(Console.ReadLine());
         var ventas = VentaController.TraerVentas(idUsuario2);
@@ -40,10 +50,13 @@ class Program
         {
             Console.WriteLine("Venta nro: {0}", ven.Id);
         }
-        */
-        Console.WriteLine("Indique Nombre de Usuario");
+        Console.WriteLine("--------------\n");
+
+        // e) Inicio de Sesion
+        Console.WriteLine("---- Iniciar Sesión: ----");
+        Console.WriteLine("Nombre de uuario");
         string nombreDeUsuario = Console.ReadLine();
-        Console.WriteLine("Introduzca su contraseña");
+        Console.WriteLine("Contraseña");
         string contraseña = Console.ReadLine();
         var inicioSesion = InicioSesionController.InicioSesion(nombreDeUsuario, contraseña);
                
@@ -53,7 +66,6 @@ class Program
         Console.WriteLine("NombreUsuario: {0}", inicioSesion.NombreUsuario);
         Console.WriteLine("Contraseña: {0}", inicioSesion.Contraseña);
         Console.WriteLine("Mail: {0}", inicioSesion.Mail);
-        Console.WriteLine("--------------\n");            
-
+        Console.WriteLine("--------------\n");
     }
 }
